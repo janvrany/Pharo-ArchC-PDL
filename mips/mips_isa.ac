@@ -300,7 +300,7 @@ AC_ISA(mips){
     bgezal.set_decoder(op=0x01, rt=0x11);
   
     sys_call.set_asm("syscall");
-    sys_call.set_decoder(op=0x00, func=0x0C);
+    sys_call.set_decoder(op=0x00, func=0x0C, rt=0, rs=0, rd=0, shamt=0);
   
     instr_break.set_asm("break", rt=0);
     instr_break.set_asm("break %imm", rt);
